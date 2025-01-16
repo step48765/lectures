@@ -43,7 +43,7 @@
 ;  (stream-nth 100 (stream-enumerate 1 1000)) => 101
 ;
 (define (stream-enumerate lo hi)
-  (if (> lo hi) hi
+  (if (> lo hi) null
       (stream-cons lo (stream-enumerate (+ lo 1) hi))))
 
 ; Create a stream containing all numbers n, n+1, n+2, ...
